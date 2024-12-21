@@ -1,0 +1,299 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E53AB3D1-10C9-434B-B394-9624C35AFD70}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DSA_Final_Project</RootNamespace>
+    <AssemblyName>DSA_Final_Project</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>packages\Guna.UI2.WinForms.2.0.4.6\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Customized.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customized.Designer.cs">
+      <DependentUpon>Customized.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EasyMode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EasyMode.Designer.cs">
+      <DependentUpon>EasyMode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GameManager.cs" />
+    <Compile Include="Graph.cs" />
+    <Compile Include="HardMode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HardMode.Designer.cs">
+      <DependentUpon>HardMode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lose.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lose.Designer.cs">
+      <DependentUpon>Lose.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MediumMode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MediumMode.Designer.cs">
+      <DependentUpon>MediumMode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SoundManager.cs" />
+    <Compile Include="Start.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Start.Designer.cs">
+      <DependentUpon>Start.cs</DependentUpon>
+    </Compile>
+    <Compile Include="winingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="winingForm.Designer.cs">
+      <DependentUpon>winingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WordInputForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WordInputForm.Designer.cs">
+      <DependentUpon>WordInputForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WordPriorityQueue.cs" />
+    <EmbeddedResource Include="Customized.resx">
+      <DependentUpon>Customized.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EasyMode.resx">
+      <DependentUpon>EasyMode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HardMode.resx">
+      <DependentUpon>HardMode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lose.resx">
+      <DependentUpon>Lose.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MediumMode.resx">
+      <DependentUpon>MediumMode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Start.resx">
+      <DependentUpon>Start.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="winingForm.resx">
+      <DependentUpon>winingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WordInputForm.resx">
+      <DependentUpon>WordInputForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\letter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\letter_A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\letter_B.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\letter_C.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\letter_D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\letter_E.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\letter_F.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\letter_G.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\letter_H.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\letter_I.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\letter_J.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\letter_K.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\letter_L.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\letter_M.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\letter_N.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\letter_O.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\letter_P.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\letter_Q.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\letter_R.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\letter_S.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\letter_T.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\letter_U.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\letter_V.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\letter_W.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\letter_X.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\letter_Y.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\letter_Z.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot 2024-12-05 200303.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images %286%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images %285%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images %287%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\giphy %281%29.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reasonsimbroke-kramer.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\error.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\move.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\click.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\found.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\start.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fail.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\victory.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\victory %281%29.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pianos-by-jtwayne-7-174717.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fail %281%29.wav" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
